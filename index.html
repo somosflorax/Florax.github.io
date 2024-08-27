@@ -6,11 +6,15 @@
 -->
 <html>
 	<head>
-		<title>Florax - Empresa Juvenil de DESEM</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<head>
+			<title>Florax - Empresa Juvenil de DESEM</title>
+			<meta charset="utf-8" />
+			<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+			<link rel="stylesheet" href="assets/css/main.css" />
+			<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+			<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		</head>
+		
 		
 	</head>
 	<body class="is-preload">
@@ -29,20 +33,40 @@
 				</nav>
 			</header>
 
-		<!-- Intro -->
-			<section id="intro" class="main style1 dark fullscreen">
-				<div class="content">
-					<header>
-						<h2>Hola.</h2>
-						
-					</header>
-					<p>Bienvenido a la página web de <strong>Florax</strong>, Empresa Juvenil de <a href="https://www.instagram.com/desemja/?hl=es" target="_blank">DESEM</a><br />
-					 creada por estudiantes de  <a href="https://www.instagram.com/iae_montevideo/" target="_blank">IAE Montevideo</a>.</p>
-					<footer>
-						<a href="#one" class="button style2 down">Más</a>
-					</footer>
-				</div>
-			</section>
+	<!-- Intro -->
+<section id="intro" class="main style1 dark fullscreen">
+    <div class="swiper mySwiper full-width-slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="images/image1.jpg" alt="Slide 1">
+                <div class="slide-caption">
+                    <h2>Bienvenidos a Florax</h2>
+                    <p>La mejor tecnología para tus plantas.</p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <img src="images/image2.jpg" alt="Slide 2">
+                <div class="slide-caption">
+                    <h2>Innovación y Naturaleza</h2>
+                    <p>Cuidando el planeta, una planta a la vez.</p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <img src="images/image3.jpg" alt="Slide 3">
+                <div class="slide-caption">
+                    <h2>Automatización Inteligente</h2>
+                    <p>El riego perfecto para tus plantas.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Add Navigation -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+</section>
+
 
 		<!-- One -->
 			<section id="one" class="main style2 right dark fullscreen">
@@ -165,6 +189,33 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
+			<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script>
+				var swiper = new Swiper(".mySwiper", {
+					loop: true,
+					pagination: {
+						el: ".swiper-pagination",
+						clickable: true,
+					},
+					navigation: {
+						nextEl: ".swiper-button-next",
+						prevEl: ".swiper-button-prev",
+					},
+					autoplay: {
+           				 delay: 5000,
+           				 disableOnInteraction: false,
+      			    },
+				});
+			</script>
+			</body>
+			
 	</body>
 </html>
