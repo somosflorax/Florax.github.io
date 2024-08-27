@@ -2391,3 +2391,43 @@ input, select, textarea {
 		.swiper-pagination-bullet-active {
 			background: #cc7c12;
 		}
+		.menu {
+			position: relative;
+		}
+		
+		.menu .team {
+			position: relative;
+			text-decoration: none;
+			color: inherit;
+			cursor: pointer;
+		}
+		
+		.menu .team-hover {
+			display: none;
+			position: absolute;
+			left: 50%;
+			top: 100%;
+			transform: translateX(-50%);
+			background-color: white;
+			box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+			border-radius: 5px;
+			padding: 10px;
+			z-index: 10;
+			white-space: normal; /* Cambiado para permitir saltos de línea */
+		}
+		
+		.menu .team:hover .team-hover {
+			display: block;
+		}
+		
+		.menu .team-hover ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+		}
+		
+		.menu .team-hover li {
+			margin: 5px 0;
+			color: black; /* Asegúrate de que el texto sea visible */
+			display: block; /* Asegura que cada nombre esté en su propio renglón */
+		}
