@@ -841,7 +841,72 @@ input, select, textarea {
 					}
 
 		}
-
+		.swiper-slide {
+			position: relative;
+			height: 100vh; /* Altura de pantalla completa en dispositivos grandes */
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			overflow: hidden; /* Oculta el exceso de la imagen si es necesario */
+		}
+		
+		.swiper-slide img {
+			width: 100%;
+			height: 100%; /* Asegura que la imagen cubra todo el slide */
+			object-fit: cover; /* Asegura que la imagen cubra todo el área del slide */
+		}
+		
+		.slide-caption {
+			position: absolute;
+			bottom: 20px; /* Ajusta según sea necesario */
+			left: 20px;   /* Ajusta según sea necesario */
+			color: white; /* Texto blanco */
+			background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente negro */
+			padding: 10px;
+			border-radius: 5px;
+			z-index: 10; /* Asegura que el texto esté por encima de la imagen */
+			text-align: center; /* Centra el texto dentro de la caja */
+		}
+		
+		.slide-caption h2 {
+			color: white; /* Títulos en blanco */
+			margin: 0;
+		}
+		
+		.slide-caption p {
+			color: white; /* Texto en blanco */
+			margin: 5px 0 0 0;
+		}
+		
+		/* Estilos responsivos para dispositivos móviles */
+		@media screen and (max-width: 736px) {
+			.swiper-slide {
+				height: 50vh; /* Reduce la altura del carrusel a la mitad de la pantalla en dispositivos móviles */
+			}
+		
+			.slide-caption {
+				bottom: 10px;
+				left: 10px;
+				padding: 5px;
+				font-size: 0.9em; /* Reduce ligeramente el tamaño del texto en móviles */
+			}
+		
+			.swiper-slide img {
+				height: 100%; /* Asegura que la imagen cubra todo el área del slide */
+				object-fit: cover; /* Asegura que la imagen cubra todo el área, evitando que se corte */
+			}
+		}
+		
+		/* Estilos adicionales para pantallas muy pequeñas */
+		@media screen and (max-width: 480px) {
+			.swiper-slide {
+				height: 40vh; /* Reduce aún más la altura del carrusel en pantallas muy pequeñas */
+			}
+		
+			.slide-caption {
+				font-size: 0.8em; /* Reduce el tamaño del texto en pantallas muy pequeñas */
+			}
+		}
 	label {
 		display: block;
 	}
@@ -1889,6 +1954,9 @@ input, select, textarea {
 				height: 2.5em;
 				line-height: 2.5em;
 			}
+			.swiper-slide {
+				height: 50vh; /* Reduce la altura del carrusel */
+			}
 
 				#header h1 {
 					text-align: center;
@@ -1918,6 +1986,9 @@ input, select, textarea {
 			body {
 				padding-top: 2.5em;
 			}
+			.swiper-slide {
+				height: 40vh; /* Reduce aún más la altura del carrusel */
+			}
 
 		}
 		.video-container {
@@ -1927,6 +1998,7 @@ input, select, textarea {
 			height: 0;
 			overflow: hidden;
 			max-width: 100%;
+			margin-bottom: 5px;
 		}
 		
 		.video-container iframe {
@@ -2290,159 +2362,102 @@ input, select, textarea {
 
 /* Contact */
 
-	#contact {
-		overflow: hidden;
-		padding-bottom: 0;
+
+
+.content {
+	max-width: 90%;
+	margin: 40px auto;
+	padding: 20px;
+	background-color: #ffffff;
+	border-radius: 12px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+	text-align: center;
+}
+
+.content header h2 {
+	font-size: 28px;
+	color: #333;
+	margin-bottom: 10px;
+}
+
+.content header p {
+	font-size: 18px;
+	color: #666;
+	margin-bottom: 30px;
+}
+
+.contact-options {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 20px;
+}
+
+/* Estilos de los botones */
+.button {
+	display: flex;
+	padding: 15px 30px;
+	font-size: 18px;
+	font-weight: bold;
+	color: #ffffff;
+	background-color: #008CBA;
+	border: none;
+	border-radius: 50px;
+	text-decoration: none;
+	transition: all 0.3s ease;
+	box-shadow: 0 4px 12px rgba(0, 140, 186, 0.4);
+	width: 100%;
+	max-width: 300px;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+}
+
+.button:hover {
+	background-color: #007bb5;
+	box-shadow: 0 6px 16px rgba(0, 140, 186, 0.6);
+	transform: translateY(-2px);
+}
+
+.button.secondary {
+	background-color: #4CAF50;
+	box-shadow: 0 4px 12px rgba(76, 175, 80, 0.4);
+}
+
+.button.secondary:hover {
+	background-color: #45a049;
+	box-shadow: 0 6px 16px rgba(76, 175, 80, 0.6);
+	transform: translateY(-2px);
+}
+
+/* Responsividad */
+@media (min-width: 600px) {
+	.contact-options {
+		flex-direction: row;
+		justify-content: center;
 	}
 
-		#contact .box {
-			-moz-transition: -moz-transform 1s ease;
-			-webkit-transition: -webkit-transform 1s ease;
-			-ms-transition: -ms-transform 1s ease;
-			transition: transform 1s ease;
-			-moz-transform: translateY(0);
-			-webkit-transform: translateY(0);
-			-ms-transform: translateY(0);
-			transform: translateY(0);
-			position: relative;
-		}
+	.button {
+		max-width: none;
+		width: auto;
+	}
+}
+.podcast-embed {
+	margin-top: 40px;
+	padding: 20px;
+	background-color: #f9f9f9;
+	border-radius: 12px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+	text-align: center;
+}
 
-		#contact.inactive .box {
-			-moz-transform: translateY(100%);
-			-webkit-transform: translateY(100%);
-			-ms-transform: translateY(100%);
-			transform: translateY(100%);
-		}
+.podcast-embed h3 {
+	font-size: 24px;
+	color: #333;
+	margin-bottom: 20px;
+}
 
-		@media screen and (max-width: 736px) {
-
-			#contact .box {
-				padding: 1.5em 1.5em 2em 1.5em;
-			}
-
-		}
-
-		@media screen and (max-width: 480px) {
-
-			#contact .box {
-				padding: 1em 1em 2em 1em;
-			}
-
-		}
-		.slider {
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			overflow: hidden;
-			z-index: -1;
-		}
-		
-		.slide {
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			background-size: cover;
-			background-position: center;
-			opacity: 0;
-			transition: opacity 1s ease-in-out;
-		}
-		
-		.slide.active {
-			opacity: 1;
-		}
-		
-		.content {
-			position: relative;
-			z-index: 1;
-		}
-		.full-width-slider {
-			width: 100%;
-			height: 100vh; /* Fullscreen height */
-			position: relative;
-		}
-		
-		.swiper-slide {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			background-size: cover;
-			background-position: center;
-		}
-		
-		.swiper-slide img {
-			width: 100%;
-			height: 100%;
-			object-fit: cover;
-			display: block;
-		}
-		
-		.slide-caption {
-			position: absolute;
-			bottom: 20%;
-			left: 50%;
-			transform: translateX(-50%);
-			text-align: center;
-			color: #fff;
-			text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
-		}
-		
-		.slide-caption h2 {
-			font-size: 3em;
-			color: #cc7c12;
-		}
-		
-		.slide-caption p {
-			font-size: 1.5em;
-		}
-		
-		.swiper-button-next, .swiper-button-prev {
-			color: #cc7c12;
-		}
-		
-		.swiper-pagination-bullet-active {
-			background: #cc7c12;
-		}
-		.menu {
-			position: relative;
-		}
-		
-		.menu .team {
-			position: relative;
-			text-decoration: none;
-			color: inherit;
-			cursor: pointer;
-		}
-		
-		.menu .team-hover {
-			display: none;
-			position: absolute;
-			left: 50%;
-			top: 100%;
-			transform: translateX(-50%);
-			background-color: white;
-			box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-			border-radius: 5px;
-			padding: 10px;
-			z-index: 10;
-			white-space: normal; /* Cambiado para permitir saltos de línea */
-		}
-		
-		.menu .team:hover .team-hover {
-			display: block;
-		}
-		
-		.menu .team-hover ul {
-			list-style-type: none;
-			margin: 0;
-			padding: 0;
-		}
-		
-		.menu .team-hover li {
-			margin: 5px 0;
-			color: black; /* Asegúrate de que el texto sea visible */
-			display: block; /* Asegura que cada nombre esté en su propio renglón */
-		}
+.podcast-embed iframe {
+	max-width: 100%;
+	border: none;
+}

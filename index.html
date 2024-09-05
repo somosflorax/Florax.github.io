@@ -1,221 +1,280 @@
 <!DOCTYPE HTML>
-<!--
-	Big Picture by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 	<head>
-		<head>
-			<title>Florax - Empresa Juvenil de DESEM</title>
-			<meta charset="utf-8" />
-			<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-			<link rel="stylesheet" href="assets/css/main.css" />
-			<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-			<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-		</head>
-		
-		
+		<title>Florax - Empresa Juvenil de DESEM</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+		<style>
+			/* Estilos para el menú móvil */
+			.mobile-menu-button {
+			    display: none;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+    background: #cc7c12;
+    color: white;
+    border: none;
+    padding: 5px 10px; /* Reduce el padding para hacer el botón menos alto */
+    font-size: 1.5em;
+    line-height: 1; /* Asegura que el símbolo esté centrado verticalmente */
+}
+
+@media screen and (max-width: 736px) {
+    .mobile-menu-button {
+        display: block;
+        padding: 4px 8px; /* Reduce el padding para hacer el botón más compacto */
+        font-size: 1.2em; /* Ajusta el tamaño de la fuente */
+        line-height: 1; /* Mantén el símbolo centrado */
+    }
+
+    #header nav {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        z-index: 999;
+    }
+
+    #header nav.active {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #header nav ul li {
+        margin: 10px 0;
+    }
+}
+
+/* Estilos responsivos adicionales */
+@media screen and (max-width: 480px) {
+    .mobile-menu-button {
+        padding: 3px 6px; /* Reduce aún más el padding en pantallas muy pequeñas */
+        font-size: 1em; /* Ajusta el tamaño de la fuente para pantallas pequeñas */
+        line-height: 1; /* Mantén el símbolo centrado */
+    }
+
+    .content.box.style2 {
+        padding: 2em 1em;
+    }
+
+    .gallery article {
+        width: 100%;
+    }
+}
+		</style>
 	</head>
 	<body class="is-preload">
 
 		<!-- Header -->
-			<header id="header">
-				<h1 style="color: #cc7c12; ;">Florax </h1>
-				<nav>
-					<ul>
-						<li><a href="#intro">Inicio</a></li>
-						<li><a href="#one">Quiénes Somos</a></li>
-						<li><a href="#two">Nuestros Productos</a></li>
-						<li><a href="#work">Sostenibilidad</a></li>
-						<li><a href="#contact">Contacto</a></li>
-					</ul>
-				</nav>
-			</header>
+		<header id="header">
+			<h1 style="color: #cc7c12;">Florax</h1>
+			<button class="mobile-menu-button">☰</button>
+			<nav>
+				<ul>
+					<li><a href="#intro">Inicio</a></li>
+					<li><a href="#one">Quiénes Somos</a></li>
+					<li><a href="#two">Nuestros Productos</a></li>
+					<li><a href="#work">Sostenibilidad</a></li>
+					<li><a href="#contact">Contacto</a></li>
+				</ul>
+			</nav>
+		</header>
 
-	<!-- Intro -->
-<section id="intro" class="main style1 dark fullscreen">
-    <div class="swiper mySwiper full-width-slider">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <img src="images/1.jpg" alt="Slide 1">
-                <div class="slide-caption">
-                    <h2>Bienvenidos a Florax</h2>
-                    <p>La mejor tecnología para tus plantas.</p>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <img src="images/2.jpg" alt="Slide 2">
-                <div class="slide-caption">
-                    <h2>Innovación y Naturaleza</h2>
-                    <p>Cuidando el planeta, una planta a la vez.</p>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <img src="images/3.jpg" alt="Slide 3">
-                <div class="slide-caption">
-                    <h2>Automatización Inteligente</h2>
-                    <p>El riego perfecto para tus plantas.</p>
-                </div>
-            </div>
-        </div>
-        <!-- Add Pagination -->
-        <div class="swiper-pagination"></div>
-        <!-- Add Navigation -->
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-    </div>
-</section>
-
-
-		<!-- One -->
-			<section id="one" class="main style2 right dark fullscreen">
-				<div class="content box style2">
-					<header>
-						<h2>Quiénes somos</h2>
-					</header>
-					<p>En Florax, somos una empresa juvenil que combina el amor por la naturaleza y la innovación tecnológica. 
-						Hemos creado regadores inteligentes, equipados con chips que automatizan el cuidado de tus plantas, garantizando que siempre reciban el riego necesario. 
-						Nuestro compromiso es hacer que el cuidado de las plantas sea sencillo y eficiente, para que puedas disfrutar de un hogar lleno de vida sin preocupaciones. 
-						En Florax, nos dedicamos a hacer del mundo un lugar más verde, planta por planta.</p>
-				</div>
-				<a href="#two" class="button style2 down anchored">Next</a>
-			</section>
-
-		<!-- Two -->
-			<section id="two" class="main style2 left dark fullscreen">
-				<div class="content box style2">
-					<header>
-						<h2>Nuestros Productos</h2>
-					</header>
-					<p>En Florax, ofrecemos una gama de regadores inteligentes que automatizan el riego de tus plantas. Equipados con la más avanzada tecnología, nuestros productos garantizan que tus plantas reciban el cuidado perfecto, minimizando el desperdicio de agua y asegurando su bienestar.</p>
-				</div>
-				<a href="#work" class="button style2 down anchored">Next</a>
-			</section>
-
-		<!-- Work -->
-			<section id="work" class="main style3 primary">
-				<div class="content" >
-					<header>
-						<h2>Sostenibilidad</h2>
-							<p>En Florax, creemos que el futuro del planeta depende de las acciones que tomamos hoy. Por eso, la sostenibilidad es el núcleo de todo lo que hacemos.
-							 Nuestros regadores inteligentes no solo están diseñados para optimizar el cuidado de tus plantas, sino también para minimizar el desperdicio de agua, un recurso cada vez más valioso.</p>
-							</header>
-							 <h3 style="text-align: left;">¿Cómo lo logramos?</h3>
-						<ul>
-					
-							<li style="text-align: left; margin-top: 10px;"><strong>Uso eficiente del agua:</strong> Nuestros regadores inteligentes están equipados con sensores que detectan la humedad del suelo en tiempo real, asegurando que cada gota de agua se utilice de manera óptima.
-								 De esta manera, evitamos el riego excesivo y contribuimos a la conservación de este recurso.</li>
-							<li style="text-align: left;"><strong>Materiales ecoamigables:</strong> Nos comprometemos a utilizar materiales reciclables y de bajo impacto ambiental en la fabricación de nuestros productos. 
-									Cada componente de nuestros regadores ha sido cuidadosamente seleccionado para garantizar su durabilidad y reducir su huella ecológica.</li>
-							<li style="text-align: left;"><strong>Energía renovable:</strong> Nuestros dispositivos funcionan con energía solar, lo que reduce la dependencia de fuentes de energía 
-								no renovables y minimiza la emisión de gases de efecto invernadero.</li>
-						</ul>
-						<div class="video-container" style="flex: 1; min-width: 300px; max-width: 100%; margin-right: 20px;">
-         			 	  <iframe width="560" height="315" src="https://www.youtube.com/embed/kY6DuHSA8_s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-      				  </div>
-
-
-					<!-- Gallery  -->
-						<div class="gallery">
-							<article class="from-left">
-								<a href="images/fulls/01.jpg" class="image fit"><img src="images/thumbs/01.jpg" title="The Anonymous Red" alt="" /></a>
-							</article>
-							<article class="from-right">
-								<a href="images/fulls/02.jpg" class="image fit"><img src="images/thumbs/02.jpg" title="Airchitecture II" alt="" /></a>
-							</article>
-							<article class="from-left">
-								<a href="images/fulls/03.jpg" class="image fit"><img src="images/thumbs/03.jpg" title="Air Lounge" alt="" /></a>
-							</article>
-							<article class="from-right">
-								<a href="images/fulls/04.jpg" class="image fit"><img src="images/thumbs/04.jpg" title="Carry on" alt="" /></a>
-							</article>
-							<article class="from-left">
-								<a href="images/fulls/05.jpg" class="image fit"><img src="images/thumbs/05.jpg" title="The sparkling shell" alt="" /></a>
-							</article>
-							<article class="from-right">
-								<a href="images/fulls/06.jpg" class="image fit"><img src="images/thumbs/06.jpg" title="Bent IX" alt="" /></a>
-							</article>
+		<!-- Intro -->
+		<section id="intro" class="main style1 dark fullscreen">
+			<div class="swiper mySwiper full-width-slider">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<img src="images/1.jpg" alt="Slide 1">
+						<div class="slide-caption">
+							<h2>Bienvenidos a Florax</h2>
+							<p>La mejor tecnología para tus plantas.</p>
 						</div>
-
-				</div>
-			</section>
-
-		<!-- Contact -->
-			<section id="contact" class="main style3 secondary">
-				<div class="content">
-					<header>
-						<h2>Animate a saludarnos</h2>
-						<p>Rellena este formulario si te gustaría ponerte en contacto con nosotros.</p>
-					</header>
-					<div class="box">
-						<form method="post" action="#">
-							<div class="fields">
-								<div class="field half"><input type="text" name="name" placeholder="Name" /></div>
-								<div class="field half"><input type="email" name="email" placeholder="Email" /></div>
-								<div class="field"><textarea name="message" placeholder="Message" rows="6"></textarea></div>
-							</div>
-							<ul class="actions special">
-								<li><input type="submit" value="Send Message" /></li>
-							</ul>
-						</form>
+					</div>
+					<div class="swiper-slide">
+						<img src="images/2.jpg" alt="Slide 2">
+						<div class="slide-caption">
+							<h2>Innovación y Naturaleza</h2>
+							<p>Cuidando el planeta, una planta a la vez.</p>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<img src="images/3.jpg" alt="Slide 3">
+						<div class="slide-caption">
+							<h2>Automatización Inteligente</h2>
+							<p>El riego perfecto para tus plantas.</p>
+						</div>
 					</div>
 				</div>
-			</section>
+				<!-- Add Pagination -->
+				<div class="swiper-pagination"></div>
+				<!-- Add Navigation -->
+				<div class="swiper-button-next"></div>
+				<div class="swiper-button-prev"></div>
+			</div>
+		</section>
+
+		<!-- One -->
+		<section id="one" class="main style2 right dark fullscreen">
+			<div class="content box style2">
+				<header>
+					<h2>Quiénes somos</h2>
+				</header>
+				<p>En Florax, somos una empresa juvenil que combina el amor por la naturaleza y la innovación tecnológica. 
+					Hemos creado regadores inteligentes, equipados con chips que automatizan el cuidado de tus plantas, garantizando que siempre reciban el riego necesario. 
+					Nuestro compromiso es hacer que el cuidado de las plantas sea sencillo y eficiente, para que puedas disfrutar de un hogar lleno de vida sin preocupaciones. 
+					En Florax, nos dedicamos a hacer del mundo un lugar más verde, planta por planta.</p>
+			</div>
+			<a href="#two" class="button style2 down anchored">Next</a>
+		</section>
+
+		<!-- Two -->
+		<section id="two" class="main style2 left dark fullscreen">
+			<div class="content box style2">
+				<header>
+					<h2>Nuestros Productos</h2>
+				</header>
+				<p>En Florax, ofrecemos una gama de regadores inteligentes que automatizan el riego de tus plantas. Equipados con la más avanzada tecnología, nuestros productos garantizan que tus plantas reciban el cuidado perfecto, minimizando el desperdicio de agua y asegurando su bienestar.</p>
+			</div>
+			<a href="#work" class="button style2 down anchored">Next</a>
+		</section>
+
+		<!-- Work -->
+		<section id="work" class="main style3 primary">
+			<div class="content">
+				<header>
+					<h2>Sostenibilidad</h2>
+					<p>En Florax, creemos que el futuro del planeta depende de las acciones que tomamos hoy. Por eso, la sostenibilidad es el núcleo de todo lo que hacemos.
+					 Nuestros regadores inteligentes no solo están diseñados para optimizar el cuidado de tus plantas, sino también para minimizar el desperdicio de agua, un recurso cada vez más valioso.</p>
+				</header>
+				<h3 style="text-align: left;">¿Cómo lo logramos?</h3>
+				<ul>
+					<li style="text-align: left; margin-top: 10px;"><strong>Uso eficiente del agua:</strong> Nuestros regadores inteligentes están equipados con sensores que detectan la humedad del suelo en tiempo real, asegurando que cada gota de agua se utilice de manera óptima.
+						 De esta manera, evitamos el riego excesivo y contribuimos a la conservación de este recurso.</li>
+					<li style="text-align: left;"><strong>Materiales ecoamigables:</strong> Nos comprometemos a utilizar materiales reciclables y de bajo impacto ambiental en la fabricación de nuestros productos. 
+							Cada componente de nuestros regadores ha sido cuidadosamente seleccionado para garantizar su durabilidad y reducir su huella ecológica.</li>
+					<li style="text-align: left;"><strong>Energía renovable:</strong> Nuestros dispositivos funcionan con energía solar, lo que reduce la dependencia de fuentes de energía 
+						no renovables y minimiza la emisión de gases de efecto invernadero.</li>
+				</ul>
+				<div class="video-container" style="flex: 1; min-width: 300px; max-width: 100%; margin-right: 20px;">
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/kY6DuHSA8_s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+				</div>
+
+				<!-- Gallery  -->
+				<div class="gallery">
+					<article class="from-left">
+						<a href="images/fulls/01.jpg" class="image fit"><img src="images/thumbs/01.jpg" title="Regalamos pop en la Escuela 404" alt="" /></a>
+					</article>
+					<article class="from-right">
+						<a href="images/fulls/02.jpg" class="image fit"><img src="images/thumbs/02.jpg" title="Trabajo en equipo" alt="" /></a>
+					</article>
+					<article class="from-left">
+						<a href="images/fulls/03.jpg" class="image fit"><img src="images/thumbs/03.jpg" title="Llaveros Florax" alt="" /></a>
+					</article>
+					<article class="from-right">
+						<a href="images/fulls/04.jpg" class="image fit"><img src="images/thumbs/04.jpg" title="Merchandising de Florax" alt="" /></a>
+					</article>
+					<article class="from-left">
+						<a href="images/fulls/05.jpg" class="image fit"><img src="images/thumbs/05.jpg" title="Prototipo del Wireframe de la pagina" alt="" /></a>
+					</article>
+					<article class="from-right">
+						<a href="images/fulls/06.jpg" class="image fit"><img src="images/thumbs/06.jpg" title="Creación del Podcast" alt="" /></a>
+					</article>
+				</div>
+			</div>
+		</section>
+		<div class="podcast-embed">
+			<h3>Escucha nuestro último podcast</h3>
+			<iframe src="https://embed.acast.com/66d0ac42e6ffa548dfedef92/66d0ae01f16c66f62d17fb5d?theme=light" 
+					width="70%" 
+					height="200" 
+					frameborder="0" 
+					scrolling="no" 
+					style="border-radius: 10px;">
+			</iframe>
+		</div>
+
+		<!-- Contact -->
+		<section id="contact" class="main style3 secondary">
+			<div class="content">
+				<header>
+					<h2>Animate a saludarnos</h2>
+					<p>Nos encantaría saber de ti. Puedes contactarnos de las siguientes maneras:</p>
+				</header>
+				<div class="contact-options">
+					<a href="https://forms.gle/9xxgJnXifssmQKYd7" target="_blank" class="button">Rellenar Formulario</a>
+					<a href="mailto:FloraxUy@gmail.com" class="button secondary">Escríbenos un Correo</a>
+				</div>
+			</div>
+		</section>
 
 		<!-- Footer -->
-			<footer id="footer">
+		<footer id="footer">
+			<ul class="icons">
+				<li><a href="https://www.instagram.com/somosflorax/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@somosflorax" target="_blank"><i class="fa-brands fa-tiktok"></i></a></li>
+			</ul>
 
-				<ul class="icons">
-					<li><a href="https://www.instagram.com/somosflorax/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
-					<li><a href="https://www.tiktok.com/@somosflorax" target="_blank"><i class="fa-brands fa-tiktok"></i></a></li>
-				</ul>
-				
-				<!-- Menu -->
-				<ul class="menu">
-					<li>&copy; DESEM JA</li>
-					<li>Design by: Florax IT Team</a></li>
-				</ul>
-
-			</footer>
+			<!-- Menu -->
+			<ul class="menu">
+				<li>&copy; DESEM JA</li>
+				<li>Design by: Florax IT Team</li>
+			</ul>
+		</footer>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.poptrox.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-			<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.poptrox.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-			<script>
-				var swiper = new Swiper(".mySwiper", {
-					loop: true,
-					pagination: {
-						el: ".swiper-pagination",
-						clickable: true,
-					},
-					navigation: {
-						nextEl: ".swiper-button-next",
-						prevEl: ".swiper-button-prev",
-					},
-					autoplay: {
-           				 delay: 5000,
-           				 disableOnInteraction: false,
-      			    },
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.poptrox.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+		<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+		<script>
+			var swiper = new Swiper(".mySwiper", {
+				loop: true,
+				pagination: {
+					el: ".swiper-pagination",
+					clickable: true,
+				},
+				navigation: {
+					nextEl: ".swiper-button-next",
+					prevEl: ".swiper-button-prev",
+				},
+				autoplay: {
+					delay: 5000,
+					disableOnInteraction: false,
+				},
+			});
+
+			// Funcionalidad del menú móvil
+			document.querySelector('.mobile-menu-button').addEventListener('click', function() {
+				document.querySelector('#header nav').classList.toggle('active');
+			});
+
+			// Cerrar el menú al hacer clic en un enlace
+			document.querySelectorAll('#header nav a').forEach(function(link) {
+				link.addEventListener('click', function() {
+					document.querySelector('#header nav').classList.remove('active');
 				});
-			</script>
-			</body>
-			
+			});
+		</script>
 	</body>
 </html>
